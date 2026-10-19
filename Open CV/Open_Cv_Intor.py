@@ -1,0 +1,22 @@
+import cv2
+import os
+image=cv2.imread("C:/Users/maxsc/Open CV/image.jpg")
+cv2.imshow("The Image...",image)
+cv2.waitKey(0)
+greyimage=cv2.imread(r"C:\Users\maxsc\Open CV\image.jpg",0)
+cv2.imshow("Greyscale image",greyimage)
+cv2.waitKey(0)
+part=r"C:\Users\maxsc\Open CV\images"
+os.chdir(part)
+cv2.imwrite("mountain image.jpg",image)
+cv2.imwrite("greyscale mountain image.jpg",greyimage)
+b,g,r=cv2.split(image)
+cv2.imshow("blue saturation",b)
+cv2.waitKey(0)
+cv2.imshow("green saturation",g)
+cv2.waitKey(0)
+cv2.imshow("red saturation",r)
+cv2.waitKey(0)
+resizeimage=cv2.resize(image,(400,400))
+cv2.imshow("resized image",resizeimage)
+cv2.waitKey(0)
